@@ -1,0 +1,26 @@
+{
+  "javascript": {
+    "code": "function greet(name) {\n  console.log(`Hello, ${name}!`);\n}\ngreet('Alice');",
+    "explanation": "Defines a function that takes a name and prints a greeting."
+  },
+  "python": {
+    "code": "def greet(name):\n    print(f\"Hello, {name}!\")\n\ngreet(\"Alice\")",
+    "explanation": "Defines a function in Python that greets the user by name."
+  },
+  "c++": {
+    "code": "#include <iostream>\nvoid greet(std::string name) {\n    std::cout << \"Hello, \" << name << \"!\";\n}\n\ngreet(\"Alice\");",
+    "explanation": "Defines a C++ function to greet someone using std::cout."
+  },
+  "java": {
+    "code": "public class Main {\n  public static void greet(String name) {\n    System.out.println(\"Hello, \" + name + \"!\");\n  }\n\n  public static void main(String[] args) {\n    greet(\"Alice\");\n  }\n}",
+    "explanation": "Java method that prints a greeting message to the console."
+  },
+  "go": {
+    "code": "package main\nimport \"fmt\"\n\nfunc greet(name string) {\n    fmt.Println(\"Hello, \" + name + \"!\")\n}\n\nfunc main() {\n    greet(\"Alice\")\n}",
+    "explanation": "Function in Go that greets the user using fmt.Println."
+  },
+  "rust": {
+    "code": "fn greet(name: &str) {\n    println!(\"Hello, {}!\", name);\n}\n\nfn main() {\n    greet(\"Alice\");\n}",
+    "explanation": "Rust function that prints a greeting using println!."
+  }
+}

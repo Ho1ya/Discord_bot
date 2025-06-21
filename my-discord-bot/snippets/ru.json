@@ -1,0 +1,26 @@
+{
+  "javascript": {
+    "code": "function greet(name) {\n  console.log(`Hello, ${name}!`);\n}\ngreet('Alice');",
+    "explanation": "Создаёт функцию, которая принимает имя и выводит приветствие."
+  },
+  "python": {
+    "code": "def greet(name):\n    print(f\"Hello, {name}!\")\n\ngreet(\"Alice\")",
+    "explanation": "Функция в Python, которая приветствует пользователя по имени."
+  },
+  "c++": {
+    "code": "#include <iostream>\nvoid greet(std::string name) {\n    std::cout << \"Hello, \" << name << \"!\";\n}\n\ngreet(\"Alice\");",
+    "explanation": "Функция на C++, которая выводит приветствие через std::cout."
+  },
+  "java": {
+    "code": "public class Main {\n  public static void greet(String name) {\n    System.out.println(\"Hello, \" + name + \"!\");\n  }\n\n  public static void main(String[] args) {\n    greet(\"Alice\");\n  }\n}",
+    "explanation": "Метод в Java, который выводит сообщение с приветствием."
+  },
+  "go": {
+    "code": "package main\nimport \"fmt\"\n\nfunc greet(name string) {\n    fmt.Println(\"Hello, \" + name + \"!\")\n}\n\nfunc main() {\n    greet(\"Alice\")\n}",
+    "explanation": "Функция в Go, которая выводит приветствие через fmt.Println."
+  },
+  "rust": {
+    "code": "fn greet(name: &str) {\n    println!(\"Hello, {}!\", name);\n}\n\nfn main() {\n    greet(\"Alice\");\n}",
+    "explanation": "Функция в Rust, выводящая приветствие через println!."
+  }
+}
