@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const fs = require('node:fs');
-const path = require('node:path');
+const path = require('path');
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -8,8 +8,16 @@ module.exports = {
     .setDescription('Показать сниппет Show snippet')
     .addStringOption(option =>
       option.setName('programming')
-        .setDescription('JavaScript, Python, C++, Java, Go Rust')
+        .setDescription('Выбери язык')
         .setRequired(true)
+        .addChoices(
+          { name: 'JavaScript', value: 'JavaScript' },
+          { name: 'Python', value: 'Python' },
+          { name: 'C++', value: 'C++' },
+          { name: 'Java', value: 'Java' },
+          { name: 'Go', value: 'Go' },
+          { name: 'Rust', value: 'Rust' },
+        )
     ),
 
   async execute(interaction, client) {
@@ -19,9 +27,8 @@ module.exports = {
     const snippets = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
     const data = snippets[programming];
-
     if (!data) {
-      await interaction.reply({ content: '❌ Такого сниппета нет.', flags: 1 << 6});
+      await interaction.reply({ content: '❌ Такого сниппета нет.', flags: 1 << 6 });
       return;
     }
 
@@ -32,5 +39,6 @@ module.exports = {
       .setColor('Blue');
 
     await interaction.reply({ embeds: [embed] });
-  }
+  },
 };
+
